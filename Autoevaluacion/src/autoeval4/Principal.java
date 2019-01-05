@@ -1,6 +1,7 @@
 package autoeval4;
 
 /**
+ * Programa para cargar datos de usuario en una array segun un patron
  * 
  * @author Ignacio Belmonte 5 ene. 2019
  */
