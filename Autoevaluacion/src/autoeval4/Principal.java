@@ -42,7 +42,7 @@ public class Principal {
 			posicionEnElPatron++;
 		}
 		reiniciarPosicionEnElPatron();
-		reiniciarPosicionEnDatosUsuarioParaCargar();
+		reiniciarNumUsuarioParaCargar();
 	}
 
 	private static boolean isRecoridoElPatronCompleto(int[] patron) {
@@ -65,8 +65,8 @@ public class Principal {
 				"rol" + numUsuarioParaCargar);
 	}
 
-	private static void reiniciarPosicionEnDatosUsuarioParaCargar() {
-		numUsuarioParaCargar = 0;
+	private static void reiniciarNumUsuarioParaCargar() {
+		numUsuarioParaCargar = 1;
 	}
 
 } // class
