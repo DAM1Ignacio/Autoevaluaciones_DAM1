@@ -17,10 +17,9 @@ public class Principal {
 		cargarDatosUsuariosPatron(patron);
 
 		// Comprobacion de que se han guardado los datos en la posicion
-		System.out.println(datosUsuarios[0].getNombre());
-		System.out.println(datosUsuarios[1].getNombre());
-		System.out.println(datosUsuarios[2].getNombre());
-		System.out.println(datosUsuarios[4].getNombre());
+		for (int i = 0; i < datosUsuarios.length; i++) {
+			System.out.println(datosUsuarios[i]);
+		}
 	}
 
 	/**
