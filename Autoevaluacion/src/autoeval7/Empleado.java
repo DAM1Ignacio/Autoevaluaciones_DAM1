@@ -1,21 +1,25 @@
 package autoeval7;
 
+/**
+ * Empleado.java
+ * @author Ignacio Belmonte
+ *
+ */
 
 public class Empleado {
-
 	private String nombre;
 	private double sueldo;
 	private int edad;
 	private PuestoTrabajo puesto;
+	
+	public enum PuestoTrabajo {Jefe, Empleado}
 
 	public Empleado(String nombre, double sueldo, int edad, PuestoTrabajo puesto) throws EmpleadoException {
 			setNombre(nombre);
 			setSueldo(sueldo);
 			setEdad(edad);
 			setPuesto(puesto);
-
 	}
-
 	
 	public Empleado(Empleado empleado) {
 		nombre = new String(empleado.nombre);
@@ -98,7 +102,6 @@ public class Empleado {
 		return result;
 	}
 
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -126,4 +129,21 @@ public class Empleado {
 		return new Empleado(this);
 	}
 
+}
+
+/**
+ * Clase creada para tratar los posibles errores de la clase Empleado
+ *
+ */
+class EmpleadoException extends Exception {
+
+	private static final long serialVersionUID = 1L;
+
+	public EmpleadoException(String mensaje) {
+		super(mensaje);
+	}
+
+	public EmpleadoException() {
+		super();
+	}
 }

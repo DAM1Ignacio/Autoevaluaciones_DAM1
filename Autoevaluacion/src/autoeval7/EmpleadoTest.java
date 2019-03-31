@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import autoeval7.Empleado.PuestoTrabajo;
+
+/**
+ * Test de pruebas para la clase Empleado
+ * @author Ignacio Belmonte
+ *
+ */
 class EmpleadoTest {
 
 	private static Empleado empleado;
@@ -14,8 +21,8 @@ class EmpleadoTest {
 	@BeforeAll
 	public static void inicializarEmpleado() {
 		try {
-			empleado = new Empleado("Nacho", 10500, 20, PuestoTrabajo.Jefe);
-			empleado2 = new Empleado("Jose", 10400, 23, PuestoTrabajo.Empleado);
+			empleado = new Empleado("Nacho", 10500, 20, Empleado.PuestoTrabajo.Jefe);
+			empleado2 = new Empleado("Jose", 10400, 23, Empleado.PuestoTrabajo.Empleado);
 		} catch (EmpleadoException e) {
 			e.printStackTrace();
 		}
@@ -26,7 +33,7 @@ class EmpleadoTest {
 		assertEquals(empleado.getNombre(), "Nacho");
 		assertEquals(empleado.getSueldo(), 10500, 00);
 		assertEquals(empleado.getEdad(), 20);
-		assertEquals(empleado.getPuesto(), PuestoTrabajo.Jefe);
+		assertEquals(empleado.getPuesto(), Empleado.PuestoTrabajo.Jefe);
 
 	}
 
